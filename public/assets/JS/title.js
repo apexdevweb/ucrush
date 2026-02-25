@@ -1,12 +1,6 @@
-const allTitle = document.querySelectorAll(".globale__sub--title");
-let uniqTitle;
+const barre = document.querySelectorAll(".burger__menu");
+const menu = document.querySelector(".content")
 
-
-allTitle.forEach((titleEl, index) => {
-  myTitle = titleEl[index];
-  if (condition) {
-    console.log(titleEl);
-  } else {
-    
-  }
-});
+barre.addEventListener("click", ()=>{
+ menu.classList.toggle("view");
+})

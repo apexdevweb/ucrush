@@ -16,12 +16,12 @@ CREATE PROCEDURE login_user(IN p_mail VARCHAR(255))
    SELECT * FROM users WHERE "user_mail = p_mail";
  END $$
 
-CREATE PROCEDURE get_all_mens()
+CREATE PROCEDURE get_all_men()
 BEGIN
   SELECT "user_id, user_name, user_gender, user_location, user_description, user_age, user_avatar" FROM "users" WHERE "user_gender" = "M";
 END $$
 
-CREATE PROCEDURE get_all_womens()
+CREATE PROCEDURE get_all_women()
 BEGIN
   SELECT "user_id, user_name, user_gender, user_location, user_description, user_age, user_avatar" FROM "users" WHERE "user_gender" = "F";
 END $$

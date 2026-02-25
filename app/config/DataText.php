@@ -1,5 +1,4 @@
 <?php 
-
 class DataText {
 
  public const PRIMARY_TITLE = "Ucrush";
@@ -28,5 +27,3 @@ class DataText {
  public const ERROR_SIGNUP = "Veuillez remplir tous les champs";
 
 }
-
-?>

@@ -14,7 +14,7 @@ if (isset($_GET['page'])) {
 } else {
   $page = 'home';
 }
-//si jamais la page n'existe pas on redirige sur 'home' automatiquement
+//si jamais la page n'existe pas dans une des clée du tableau indexé on redirige sur 'home' automatiquement
 if (!array_key_exists($page, AVAILABLE_ROUTES)) {
   $page = 'home';
 }
@@ -22,7 +22,7 @@ if (!array_key_exists($page, AVAILABLE_ROUTES)) {
 //on stocke les pages avec connexion requise dans un tableau
 $protected_private_page = ['profil', 'user', 'logout'];
 
-//on verifie que la page demander par l'utilisateur figure biens dans le tableau
+//on verifie que la page demander par l'utilisateur figure biens dans le tableau de pages avec connexion requise
 if (in_array($page, $protected_private_page)) {
   //si la session n'est pas vérifier on l'envoi sur la page login
   if (!isset($_SESSION['usr_auth']) || !isset($_SESSION['user_data']['usrSecureKey'])) {
@@ -42,7 +42,7 @@ if (file_exists($controllerFile)) {
 
    //on instancie et on appel la method
    $app = new $controllerName();
-
+//structure conditionelle pour switché entre les pages
    if ($page === 'home') {
      $app->homePage();
    } elseif ($page === 'user') {

@@ -1,8 +1,8 @@
-###### ↓↓↓↓Architecturale-Fortress↓↓↓↓ ######
+###### ↓↓↓↓Architectural-Fortress↓↓↓↓ ######
 _____________________________________________________________________________
 _____________________________________________________________________________
-### COMBO: MVC + PROCEDURE STOCKEE + VUES RELATIONELLES + BACKEND-TO-FRONTEND
-↓↓                                                                          ↓↓                                    
+### COMBO: MVC + PROCEDURE STOCKEE + VUES RELATIONELLES + BTF
+↓↓                                                          ↓↓                                    
 |
 |------>Architecture extrêmement robuste, souvent utilisée dans les applications bancaires ou de haute sécurité.
 |------>Sécurité renforcée (Défense en profondeur)
@@ -10,9 +10,9 @@ _____________________________________________________________________________
 #### Architecture M.V.C(model view controller)
 ↓↓                                           ↓↓ 
 |
-|-->Le Modèle (M) : C'est le seul qui parle à la base de données (SignupManager). Il ne sait pas à quoi ressemble votre site, il gère juste la donnée.
-|-->La Vue (V) : C'est votre HTML/CSS. Elle ne sait pas que la base de données existe, elle se contente d'afficher les variables qu'on lui donne.
-|-->Le Contrôleur (C) : C'est le chef d'orchestre. Il reçoit la requête, demande au Modèle de vérifier les infos, puis décide quelle Vue afficher.
+|-->Le Modèle (M): C'est le seul qui parle à la base de données (SignupManager). Il ne sait pas à quoi ressemble votre site, il gère juste la donnée.
+|-->La Vue (V): C'est votre HTML/CSS. Elle ne sait pas que la base de données existe, elle se contente d'afficher les variables qu'on lui donne.
+|-->Le Contrôleur (C): C'est le chef d'orchestre. Il reçoit la requête, demande au Modèle de vérifier les infos, puis décide quelle Vue afficher.
 |
 |------>Séparation des responsabilités
 |------>Facilité de maintenance et d'évolution
@@ -36,7 +36,7 @@ _____________________________________________________________________________
 |------>Centralisation de la Logique Métier 
        |___________________________________→ Tous vos scripts PHP (Profil, Admin, Recherche) bénéficieront de la modification        automatiquement sans que vous ayez à retoucher à votre code source.
 #### B.T.F(Backend To Frontend)
-↓↓                     ↓↓ 
+↓↓                           ↓↓ 
 |
 |------>Immunité aux modifications accidentelles
        |________________________________→ Une const (constante) ne peut pas être changée pendant l'exécution du script. Si tu essaies de la modifier, PHP génère une erreur.
